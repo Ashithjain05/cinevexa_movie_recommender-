@@ -1,0 +1,20 @@
+{
+    "name": "movie-rec-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "node --watch server.js"
+    },
+    "dependencies": {
+        "@fastify/cors": "^9.0.1",
+        "dotenv": "^16.6.1",
+        "fastify": "^4.26.1",
+        "fastify-cors": "^6.1.0",
+        "node-fetch": "^3.3.2",
+        "openai": "^4.28.0",
+        "sqlite3": "^5.1.7"
+    }
+}

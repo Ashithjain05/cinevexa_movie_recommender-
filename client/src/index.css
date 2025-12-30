@@ -1,0 +1,52 @@
+/* ================= PAGE LOADER ================= */
+
+.page-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background:
+        radial-gradient(circle at top, rgba(108, 242, 255, 0.08), transparent 40%),
+        #08080f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.reel {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 5px solid rgba(108, 242, 255, 0.2);
+    border-top: 5px solid #6cf2ff;
+    box-shadow: 0 0 25px rgba(108, 242, 255, 0.6);
+    margin-bottom: 24px;
+}
+
+.loader-title {
+    font-size: 32px;
+    letter-spacing: 0.18em;
+    color: #6cf2ff;
+    margin: 0;
+}
+
+.loader-subtitle {
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #a8acc4;
+    margin-top: 8px;
+}
+
+.page-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background:
+        radial-gradient(circle at top, rgba(108, 242, 255, 0.08), transparent 40%),
+        #08080f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
