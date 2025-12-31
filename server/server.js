@@ -242,14 +242,15 @@ fastify.get("/movie/:id/details", async (request, reply) => {
    🚀 START SERVER
 ====================================================== */
 
-const start = async () => {
-    try {
-        await fastify.listen({ port: 3000 });
-        console.log("🚀 Server running at http://localhost:3000");
-    } catch (err) {
-        fastify.log.error(err);
-        process.exit(1);
-    }
-};
+const PORT = process.env.PORT || 3000;
 
-start();
+fastify.listen(
+    { port: PORT, host: "0.0.0.0" },
+    (err, address) => {
+        if (err) {
+            fastify.log.error(err);
+            process.exit(1);
+        }
+        console.log(`🚀 Server running at ${address}`);
+    }
+);
