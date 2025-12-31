@@ -22,8 +22,10 @@ function App() {
         setError('');
         setRecommendations([]);
 
+        const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+
         try {
-            const response = await fetch('http://localhost:3000/recommend', {
+            const response = await fetch(`${API_URL}/recommend`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

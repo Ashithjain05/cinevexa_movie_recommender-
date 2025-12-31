@@ -11,7 +11,9 @@ const MovieModal = ({ movie, onClose }) => {
     useEffect(() => {
         if (!movie?.id) return;
 
-        fetch(`http://localhost:3000/movie/${movie.id}/details`)
+        const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+
+        fetch(`${API_URL}/movie/${movie.id}/details`)
             .then(res => res.json())
             .then(data => setDetails(data))
             .catch(() => setDetails(null));
