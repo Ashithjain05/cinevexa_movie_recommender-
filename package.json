@@ -1,10 +1,11 @@
 {
-    "name": "movie-rec-root",
+    "name": "movie-rec-project",
     "private": true,
+    "workspaces": [
+        "client",
+        "server"
+    ],
     "scripts": {
-        "install-client": "cd client && npm install",
-        "build-client": "cd client && npm run build",
-        "install": "npm run install-client",
-        "build": "npm run build-client"
+        "build": "npm run build --workspace=client"
     }
 }
